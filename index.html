@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>Actividad</title>
+<style>
+*{
+    margin: 0;  
+    padding: 0;
+}
+.contenedor{
+    width: 900px;
+    height: 600px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.tarjeta1, .tarjeta2, .tarjeta3{
+    position:absolute;
+    height: 600px;
+    width: 300px;
+    background-size: cover;
+    top:-900px;
+    left: -600px;
+
+}
+.tarjeta1{
+    background-image: url(img/html.jpg);
+    left: 0px;
+    animation: tarjeta1 3s 1 forwards;;
+}
+.tarjeta2{
+    background-image: url(img/css.jpg);
+    left:300px;
+    animation: tarjeta2 3s 1 forwards 2s;
+}
+.tarjeta3{
+    background-image: url(img/java.jpg);
+    left:600px;
+    animation: tarjeta3 3s 1 forwards 3s;
+}
+/* ANIMACIONES */
+
+@keyframes tarjeta1{
+    0%{
+        top:-900px;
+        left: -600px;
+    }
+    50%{
+        right: 300px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+@keyframes tarjeta2{
+    0%{
+        top:-900px;
+        left: 0px;
+    }
+    50%{
+        right: 300px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+@keyframes tarjeta3{
+    0%{
+        top:-900px;
+        left: 0px;
+    }
+    50%{
+        right: 300px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+/* EVENTOS */
+.tarjeta1:hover{
+    transition: 1s;
+    scale:1.2;
+    z-index: 2;
+}
+.tarjeta2:hover{
+    transition: 1s;
+    scale:1.2;
+    z-index: 2;
+}
+.tarjeta3:hover{
+    transition: 1s;
+    scale:1.2;
+    z-index: 2;
+}
+</style>
+
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="tarjeta1"></div>
+            <div class="tarjeta2"></div>
+            <div class="tarjeta3"></div>
+        </div>
+    </body>
+</html>
